@@ -35,8 +35,48 @@
   width: 100%;
   height: auto;
   display: table;
-  max-height: 100px;
+  max-height: 200px;
   max-width: 100%;
+  overflow-y: auto;
+}
+
+/* ---- renderjson color theme ---- */
+.renderjson a { text-decoration: none; cursor: pointer; }
+.renderjson .disclosure {
+  color: #0d6efd;
+  font-weight: bold;
+  padding: 0 3px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  font-size: 0.75em;
+  vertical-align: middle;
+  line-height: 1.4;
+}
+.renderjson .string  { color: #198754; }
+.renderjson .number  { color: #0d6efd; }
+.renderjson .boolean { color: #6f42c1; }
+.renderjson .keyword { color: #6f42c1; }
+.renderjson .key     { color: #dc3545; font-weight: 500; }
+.renderjson .syntax  { color: #6c757d; }
+
+[data-bs-theme=dark] .renderjson .disclosure { color: #82aaff; }
+[data-bs-theme=dark] .renderjson .string     { color: #5cb85c; }
+[data-bs-theme=dark] .renderjson .number     { color: #5bc0de; }
+[data-bs-theme=dark] .renderjson .boolean    { color: #c792ea; }
+[data-bs-theme=dark] .renderjson .keyword    { color: #c792ea; }
+[data-bs-theme=dark] .renderjson .key        { color: #f07178; }
+[data-bs-theme=dark] .renderjson .syntax     { color: #aaa; }
+
+/* ---- Query Console ---- */
+.query-console-card { border-left: 4px solid #0d6efd; }
+.query-console-card .hint { font-size: 0.75rem; color: #6c757d; }
+.qc-textarea {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  height: 160px;
+  resize: vertical;
+  white-space: pre;
+  overflow-x: auto;
 }
 
 .CodeMirror pre {
