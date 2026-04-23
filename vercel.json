@@ -1,9 +1,18 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
   "builds": [
     {
       "src": "api/index.mjs",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "build-assets.json",
+          "build/**",
+          "lib/views/**",
+          "public/images/**"
+        ]
+      }
     }
   ],
   "routes": [
